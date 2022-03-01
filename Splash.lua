@@ -1,10 +1,9 @@
 local Splash = {}
 
-
 ----creates a splash window
 Splash.new = function(name,scripturl)
-  shared.Name = name or "Splash"
-  shared.ScriptURL = scripturl or "https://raw.githubusercontent.com/eqq-evil/splash_rblx/main/HelloWorld.lua"
+        shared.Name = name or "Splash"
+        shared.ScriptURL = scripturl or "https://raw.githubusercontent.com/eqq-evil/splash_rblx/main/HelloWorld.lua"
 
 	local ScreenGui = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
@@ -44,8 +43,7 @@ Splash.new = function(name,scripturl)
 	green.BorderSizePixel = 0
 	green.Position = UDim2.new(0,0,0.012,0)
 	green.Size = UDim2.new(0, 100, 0, 16)
-	
-  ---the animation:
+	---animation
 	for _ = 1,10,1 do
 		wait(0.40)
 		game:GetService("TweenService"):Create(green, TweenInfo.new(.30), {Position = UDim2.new(0.376, 0, 0.012, 0)}):Play()
@@ -57,7 +55,7 @@ Splash.new = function(name,scripturl)
 		game:GetService("TweenService"):Create(green, TweenInfo.new(.30), {Position = UDim2.new(0,0,0.012,0)}):Play()
 	end
 	wait(0.40)
-  --------exit and load
+	--------exit and load
 	ScreenGui:Destroy()
 	loadstring(game:HttpGetAsync(shared.ScriptURL))()
 end
