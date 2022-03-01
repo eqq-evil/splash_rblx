@@ -1,0 +1,5 @@
+Splash.new(text,scripturl)
+    text <string> -> text of the ui
+    scripturl <string> -> the script url ( for example: https://raw.githubusercontent.com/eqq-evil/splash_rblx/main/HelloWorld.lua ) 
+
+    return -> Splash
