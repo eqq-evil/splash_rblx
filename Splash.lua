@@ -20,6 +20,7 @@ Splash.new = function(name,scripturl)
 	Main.BorderSizePixel = 0
 	Main.Position = UDim2.new(0.343, 0,0.297, 0)
 	Main.Size = UDim2.new(0, 540, 0, 295)
+	Main.ClipsDescendants = true
 
 	TextLabel.Parent = Main
 	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -55,7 +56,8 @@ Splash.new = function(name,scripturl)
 		game:GetService("TweenService"):Create(green, TweenInfo.new(.30), {Position = UDim2.new(0,0,0.012,0)}):Play()
 	end
 	wait(0.40)
-	--------exit and load
+	game:GetService("TweenService"):Create(Main, TweenInfo.new(.30), {Size = UDim2.new(0,540,0,0)}):Play()
+	wait(0.40)
 	ScreenGui:Destroy()
 	loadstring(game:HttpGetAsync(shared.ScriptURL))()
 end
